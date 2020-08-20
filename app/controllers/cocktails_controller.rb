@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
   
   def index
     @cocktails = Cocktail.all
+    @images = ["001-martini.png", "002-mojito.png", "004-cosmopolitan.png", "014-fruit.png", "030-squeezer.png"]
   end
 
   def new

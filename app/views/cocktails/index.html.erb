@@ -1,11 +1,20 @@
 <h1>Cocktails Overview</h1>
 <p>These are all the amazing cocktails on our menu:</p>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %><%= link_to "   Show Details", cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
-
+<% @cocktails.each do |cocktail| %>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+         <%= image_tag "#{@images.sample(1).join}", class: "card-img p-2" %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <p class="card-text"><small class="text-muted"><%= link_to "Show Details", cocktail_path(cocktail) %></small></p>
+        </div>
+      </div>
+  </div>
+</div>
+<% end %>
 
 <%= link_to "Add Cocktail", new_cocktail_path, class: "btn btn-primary" %>
