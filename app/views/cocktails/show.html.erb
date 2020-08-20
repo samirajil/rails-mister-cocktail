@@ -1,10 +1,11 @@
-<h1><%= @cocktail.name %></h1>
-<p>Ingredients</p>
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description %> <%= dose.ingredient.name %><%= link_to "Delete", dose_path(dose.id), method: :delete, data: {confirm: "Are you sure?"}%></li>
-<% end %>
+<h3><%= @cocktail.name %></h3>
+<div class="form-box">
+  <h5>Ingredients</h5>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %> <%= dose.ingredient.name %><%= link_to "Delete", dose_path(dose.id), method: :delete, data: {confirm: "Are you sure?"}%></li>
+    <% end %>
 </ul>
+</div>
 
-<p>Add Ingredient</p>
 <%= render 'doses/form' %>

@@ -1,7 +1,8 @@
-<h1>Customize Cocktail</h1>
-<p>Make your own creation: </p>
+<h3>Mix your own cocktail:</h3>
+<div class="form-box">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Create Cocktail", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Create Cocktail", class: "btn btn-primary" %>
-<% end %>

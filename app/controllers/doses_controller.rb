@@ -1,7 +1,6 @@
 class DosesController < ApplicationController
   def new
     @dose = Dose.new
-    raise
   end
 
   def create
