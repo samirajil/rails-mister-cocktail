@@ -15,10 +15,13 @@
   <body>
 
     <%= render 'shared/navbar' %>
-    <%= render 'shared/menu' %>
+    <div class="container-header">
+        <%= render 'shared/menu' %>
     <div class="inner-container">
       <%= yield %>
     </div>
      <%= render 'shared/footer' %>
-  </body>
+    </div>
+    </body>
 </html>
+

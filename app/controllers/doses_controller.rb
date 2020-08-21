@@ -1,5 +1,6 @@
 class DosesController < ApplicationController
   def new
+    @underline_new = true
     @dose = Dose.new
     @cocktail = Cocktail.find(params[:cocktail_id])
   end
