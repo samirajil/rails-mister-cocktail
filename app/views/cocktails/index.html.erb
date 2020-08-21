@@ -1,12 +1,11 @@
-<h3>These are all the amazing cocktails on our menu:</h3>
-
+<div class="card-container overflow-auto">
 <% @cocktails.each do |cocktail| %>
 <div class="card mb-3 w-90">
   <div class="row no-gutters">
       <div class = "card-image">
-         <%= image_tag "#{@images.sample(1).join}", class: "card-img p-2" %>
+        <%= cl_image_tag(cocktail.photo.key, height: 100, width: 100, crop: :fill) %>
       </div>
-      <div class="col-md-8">
+      <div class="col">
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
           <p class="card-text"><%= link_to "Show Details", cocktail_path(cocktail) %></p>
@@ -15,3 +14,5 @@
   </div>
 </div>
 <% end %>
+</div>
+

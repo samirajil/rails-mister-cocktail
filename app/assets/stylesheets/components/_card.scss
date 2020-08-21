@@ -1,7 +1,6 @@
 .card-image {
   background-color: lightgrey;
-  width: 100px;
-  height: 100px;
+  padding: 10px;
 }
 
 .card-text a {
@@ -14,4 +13,8 @@
   box-sizing: border-box;
   box-shadow: 2px 5px 4px 1px rgba(190, 178, 174, 0.15);
   border-radius: 4px;
+}
+
+.card-container {
+  max-height: 60vh;
 }
