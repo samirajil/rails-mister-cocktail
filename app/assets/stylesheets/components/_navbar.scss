@@ -12,16 +12,17 @@
 }
 
 .navbar {
-  min-height: 150px;
+  height: 15vh;
   background: linear-gradient(93.91deg, #5ACCB3 12.5%, rgba(74, 170, 143, 0) 99.08%), ;
 }
 
 .nav-link {
-  font-size: 30px;
+  font-size: 10px;
 }
 
 .active h1 {
-  margin-left: 20px;
+  margin-left: 10px;
   color: white;
   font-weight: bolder;
+  font-size: 16px;
 }
