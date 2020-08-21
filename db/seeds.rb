@@ -17,3 +17,9 @@ ingredients["drinks"].each do |ingredient|
   description = ingredient["strIngredient1"]
   Ingredient.create(name: description)
 end
+
+number = 11007
+
+20.times do 
+url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{number}"
+cocktailhash = JSON.parse(open(url).read)
