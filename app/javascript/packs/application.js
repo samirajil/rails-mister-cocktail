@@ -18,3 +18,13 @@ import 'bootstrap';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+document.addEventListener('turbolinks:load', () => {
+
+    document.querySelectorAll("a.nav-item").forEach(element => {
+        console.log(element)
+        element.addEventListener('click', (event) => {
+            console.log(event)
+            event.currentTarget.classList.toggle("active");
+        })
+    })
+});
