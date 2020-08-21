@@ -3,12 +3,11 @@
 <div class="card mb-3 w-90">
   <div class="row no-gutters">
       <div class = "card-image">
-        <%= cl_image_tag(cocktail.photo.key, height: 100, width: 100, crop: :fill) %>
+        <%= cl_image_tag(cocktail.photo.key, height: 50, width: 50, crop: :fill) %>
       </div>
       <div class="col">
         <div class="card-body">
-          <h5 class="card-title"><%= cocktail.name %></h5>
-          <p class="card-text"><%= link_to "Show Details", cocktail_path(cocktail) %></p>
+        <a href="<%= cocktail_path(cocktail) %>"><h5 class="card-title"><%= cocktail.name %></h5></a>
         </div>
       </div>
   </div>
