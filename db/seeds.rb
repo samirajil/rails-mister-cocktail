@@ -8,6 +8,7 @@
 
 require 'open-uri'
 require 'json'
+require 'byebug'
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
@@ -18,8 +19,9 @@ ingredients["drinks"].each do |ingredient|
   Ingredient.create(name: description)
 end
 
-number = 11007
+#number = 11007
+#20.times do 
+ # byebug
+  #url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{number}"
+  #cocktailhash = JSON.parse(open(url).read)
 
-20.times do 
-url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{number}"
-cocktailhash = JSON.parse(open(url).read)
