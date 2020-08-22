@@ -1,14 +1,14 @@
 <div class="footer fixed-bottom">
-  <a href="#">
+  <a href="/cocktails/new">
     <div class="d-flex flex-column align-items-center">
       <i class="fas fa-plus"></i>
       <p>Add Cocktail</p>
     </div>
   </a>
-  <%= link_to "/cocktails" do %>
+  <%= link_to "/cocktails", id: "cocktails-img" do %>
     <%= image_tag "049-whiskey.png", size: "30x30"%>
   <% end %>
-  <a href="#">
+  <a href="/cocktails/favorites">
     <div class="d-flex flex-column align-items-center">
       <i class="far fa-heart"></i>
       <p>Favorites</p>

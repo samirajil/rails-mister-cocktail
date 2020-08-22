@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 8vh;
+    height: 10vh;
     color: rgba(0,0,0,0.3);
   }
 
@@ -34,4 +34,9 @@
     font-size: 10px;
     padding: 0;
     margin: 0;
+  }
+
+  #cocktails-img {
+    padding: 0; 
+    margin-right: 15px;
   }
