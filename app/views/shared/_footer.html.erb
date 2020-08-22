@@ -1,7 +1,17 @@
 <div class="footer fixed-bottom">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#">
+    <div class="d-flex flex-column align-items-center">
+      <i class="fas fa-plus"></i>
+      <p>Add Cocktail</p>
+    </div>
+  </a>
+  <%= link_to "/cocktails" do %>
+    <%= image_tag "049-whiskey.png", size: "30x30"%>
+  <% end %>
+  <a href="#">
+    <div class="d-flex flex-column align-items-center">
+      <i class="far fa-heart"></i>
+      <p>Favorites</p>
+    </div>
+  </a>
 </div>
