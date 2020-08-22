@@ -1,9 +1,9 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show]
+  before_action :set_cocktail, only: [:show, :favorite]
   
   def index
     @underline_index = true
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.all.order(:name)
     @images = ["001-martini.png", "002-mojito.png", "004-cosmopolitan.png", "014-fruit.png", "030-squeezer.png"]
   end
 
@@ -28,6 +28,21 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
   end
 
+  def favorite
+    session[:return_to] ||= request.referer
+    if @cocktail.favorites == true
+      @cocktail.favorites = false
+    else
+      @cocktail.favorites = true
+    end
+    @cocktail.save
+    redirect_to session.delete(:return_to)
+  end
+
+  def favorites
+    @cocktails = Cocktail.all.where("favorites = true")
+  end
+
   private 
 
   def set_cocktail
@@ -35,6 +50,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+    params.require(:cocktail).permit(:name, :photo, :favorites)
   end
 end
